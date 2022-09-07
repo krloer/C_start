@@ -33,7 +33,8 @@ void sortArray(int arr[], int size) {
         }
     }
     arr = newArray;
-    printf("/n");
+    printf("\n");
+    printf("New array: ");
     printArray(newArray, size);
     printf("Sorted!\n");
 }
