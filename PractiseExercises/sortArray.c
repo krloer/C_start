@@ -48,7 +48,5 @@ int main() {
 
     printArray(arr, size);
 
-    // printArray(arr, size);
-
     return 0;
 }
