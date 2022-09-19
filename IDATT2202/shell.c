@@ -20,10 +20,11 @@ int main(int argc, char *argv[]) {
         {
             input[strlen(input)-1] = '\0';
             char *newargv[] = { input, NULL };
+            char *env[] = {NULL};
 
             printf("You entered %s", input);
 
-            execve(input, newargv, NULL);
+            execve(input, newargv, env);
         } else {
             wait(child_pid);
         }        
