@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#compiled
+IDATT2202/ka1
+IDATT2202/mem
+IDATT2202/stackoverflow
+IDATT2202/upcall
