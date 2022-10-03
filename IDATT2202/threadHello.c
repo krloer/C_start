@@ -7,6 +7,11 @@
 pthread_t threads[NTHREADS];
 void *go (void *n) {
     printf("Hello from thread %ld\n", (long)n);
+    if (n == 5)
+    {
+        sleep(2);
+    }
+    
     pthread_exit(100 + n);
     // REACHED?
 }
@@ -22,3 +27,4 @@ int main() {
     printf("Main thread done.\n");
     return 0;
 }
+
