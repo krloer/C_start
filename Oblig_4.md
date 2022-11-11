@@ -1,5 +1,8 @@
 # OBL4-OS
 
+Kristoffer Longva Eriksen
+> Done with Kristoffer Juelsen
+
 ## August 12, 2020
 
 This is a mandatory assignment. Use resources from the course to answer the following questions.Take
@@ -72,9 +75,9 @@ However, when password are salted with unique salts, the computation to check th
 
 #### (b) Explain how a user can use a program to update the password database, while at the same time does not have read or write permissions to the password database file itself. What are the caveats of this?
 
-A program can use the setuid() and setgid() library calls to escalate the priveleges of the program, unrelated to the priveleges of the users calling the program. This allows a user to execute a program that increases the programs priveleges, executes specified operations on the database file and then exits, without the user being able to read/write to the database itself.
+A program can use the setuid() and setgid() library calls to escalate the privileges of the program, unrelated to the privileges of the users calling the program. This allows a user to execute a program that increases the programs privileges, executes specified operations on the database file and then exits, without the user being able to read/write to the database itself.
 
-This comes with some security risks, as its very important to make sure the code executing with escalated priveleges can not be exploited. If it can be exploited, the attacker will gain higher priveleges than the user and be able to execute commands that they shouldnt. For this reason, in addition to securing the code, we should also make sure that we escalate the priveleges with the principle of least privelege (to limit the damage if the program is compromised).
+This comes with some security risks, as its very important to make sure the code executing with escalated privileges can not be exploited. If it can be exploited, the attacker will gain higher privileges than the user and be able to execute commands that they shouldnt. For this reason, in addition to securing the code, we should also make sure that we escalate the privileges with the principle of least privilege (to limit the damage if the program is compromised).
 
 ### 2. Software vulnerabilities
 
@@ -88,4 +91,4 @@ This is why all programmers that wish to recieve input through the gets() librar
 
 #### (b) Explain why a microkernel is statistically more secure than a monolithic kernel.
 
-A monolithic kernel takes a lot of control, and prevents bad user code from compromising the kernel, however it does not prevent bad kernel code from causing damage. With a properly implemented microkernel, a lot of the code making the system function operates without inherent kernel priveleges, meaning it can deal less damage. This means that considering all code can be buggy, a monolithic kernel has a larger attack surface, seeing that its is statistically more likely to contain exploitable bugs granting kernel priveleges.
+A monolithic kernel takes a lot of control, and prevents bad user code from compromising the kernel, however it does not prevent bad kernel code from causing damage. With a properly implemented microkernel, a lot of the code making the system function operates without inherent kernel privileges, meaning it can deal less damage. This means that considering all code can be buggy, a monolithic kernel has a larger attack surface, seeing that its is statistically more likely to contain exploitable bugs granting kernel privileges.
